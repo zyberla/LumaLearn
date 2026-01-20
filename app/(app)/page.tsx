@@ -278,7 +278,8 @@ export default async function Home() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
-            {courses.map((course) => (
+            {/* FIX: Explicitly typed 'course' as any to satisfy TypeScript build */}
+            {courses.map((course: any) => (
               <CourseCard
                 key={course.slug!.current!}
                 slug={{ current: course.slug!.current! }}
